@@ -1,3 +1,4 @@
+from __future__ import print_function
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
 #
@@ -52,7 +53,7 @@ def getch(timeout=0.01):
         if fileno in rlist:
             ch = sys.stdin.read(1)
     except Exception as ex:
-        print "getch", ex
+        print("getch", ex)
         raise OSError
     finally:
         termios.tcsetattr(fileno, termios.TCSADRAIN, old_settings)

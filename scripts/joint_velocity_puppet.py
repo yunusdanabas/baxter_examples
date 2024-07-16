@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -27,6 +27,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+from __future__ import print_function
 import argparse
 import sys
 
@@ -101,9 +102,9 @@ class Puppeteer(object):
         control_joint_names = self._control_arm.joint_names()
         puppet_joint_names = self._puppet_arm.joint_names()
 
-        print ("Puppeting:\n"
+        print(("Puppeting:\n"
               "  Grab %s cuff and move arm.\n"
-              "  Press Ctrl-C to stop...") % (self._control_limb,)
+              "  Press Ctrl-C to stop...") % (self._control_limb,))
         while not rospy.is_shutdown():
             cmd = {}
             for idx, name in enumerate(puppet_joint_names):

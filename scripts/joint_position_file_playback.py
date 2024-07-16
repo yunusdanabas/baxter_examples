@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -30,6 +30,7 @@
 """
 Baxter RSDK Joint Position Example: file playback
 """
+from __future__ import print_function
 import argparse
 import sys
 
@@ -140,7 +141,7 @@ def map_file(filename, loops=1):
                     grip_right.type() != 'custom'):
                     grip_right.command_position(cmd['right_gripper'])
                 rate.sleep()
-        print
+        print()
     return True
 
 

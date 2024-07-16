@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -29,6 +29,7 @@
 """
 Baxter RSDK Joint Torque Example: joint springs
 """
+from __future__ import print_function
 
 import argparse
 
