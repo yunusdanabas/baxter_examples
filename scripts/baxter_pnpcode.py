@@ -156,5 +156,5 @@ right_limb.move_to_joint_positions(place_positions_up[i])
 rospy.sleep(0.5)
 
 # Move to pick position above the object
-right_limb.move_to_joint_positions(pick_positions_up[1])
+right_limb.move_to_joint_positions(pick_positions_up[i])
 rospy.sleep(0.5)
